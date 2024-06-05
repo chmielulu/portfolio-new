@@ -20,6 +20,8 @@ const openGraph = {
   url: DEFAULT_URL_SITE,
   description: og?.description || DEFAULT_DESCRIPTION_PAGE,
 };
+
+const domain = window.location.host;
 ---
 
 <head>
@@ -56,5 +58,5 @@ const openGraph = {
       ],
     }}
   />
-  <script defer data-domain="jakubprogramista.dev" src="https://plausible.jakubcloud.pl/js/script.js"></script>
+  <script defer data-domain={domain} src="https://plausible.jakubcloud.pl/js/script.js"></script>
 </head>
